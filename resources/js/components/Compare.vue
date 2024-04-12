@@ -10,6 +10,13 @@ export default {
     methods: {
         remove(id) {
             removeProductFromCompare([id])
+        },
+
+        formatImage(img) {
+            let regex = new RegExp('(?<break>[\\w\\d\\W]+\\/cache+\\/[\\w\\d]+\\/)');
+            let remove = regex.exec(img).groups.break;
+
+            return img.replace(remove, '');
         }
     },
 

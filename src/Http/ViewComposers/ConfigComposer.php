@@ -9,7 +9,7 @@ class ConfigComposer
 {
     public function compose(View $view)
     {
-        Config::set('frontend.queries.compare', view('rapidez-compare::product.queries.compare')->renderOneliner());
-        Config::set('frontend.translations.compare', __('rapidez-compare::frontend.compare'));
+        Config::set('frontend.compare.query', view('rapidez-compare::product.queries.compare')->renderOneliner());
+        Config::set('frontend.compare.translations', __('rapidez-compare::frontend.compare'));
     }
 }

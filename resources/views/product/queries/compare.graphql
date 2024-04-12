@@ -7,12 +7,31 @@ attributes {
 items {
     uid
     product {
+        id
         sku
         name
         url_key
         image {
             url
             label
+        }
+        price_range {
+            minimum_price {
+                regular_price {
+                    currency
+                    value
+                }
+                final_price {
+                    currency
+                    value
+                }
+            }
+            maximum_price {
+                final_price {
+                    currency
+                    value
+                }
+            }
         }
     }
     attributes {
